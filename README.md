@@ -62,7 +62,7 @@ $ npm install
 ```
 * avant de lancer , executer ceci pour effectuer un audit de sécurité du code et corriger les vulnérabilités avant de personnaliser le framework .
 ```
-$ npm audit fix 
+$  npm audit fix 
 ```
 * Then you can launch test :
 ```
