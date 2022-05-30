@@ -1,4 +1,4 @@
-Feature: User connected
+Feature: User will  connected
 
         Background:
             Given I am logged in
