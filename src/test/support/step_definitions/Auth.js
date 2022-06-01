@@ -1,5 +1,5 @@
-import {And, Given, Then, When} from "cypress-cucumber-preprocessor/steps"
-import AuthPage from '../Pages/AuthPage';
+import {And, Given, Then, When} from "@badeball/cypress-cucumber-preprocessor"
+import AuthPage from '../../../main/pageObjects/AuthPage';
 
 //TC_808
 //Verify successful login with credentials 

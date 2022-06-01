@@ -1,15 +1,21 @@
 {
-  "chromeWebSecurity": false,
-  "fileServerFolder": "Z-TRAIN",
-  "testFiles": "features/**/*.feature",
-  "fixturesFolder": "src/ressources",
-  "integrationFolder": "src/test",
-  "pluginsFile": "src/main/plugins/index.js",
-  "screenshotsFolder": "target/screenshots",
-  "videosFolder": "target/videos",
-  "supportFile": "src/main/support/index.js",
-  "downloadsFolder": "target/downloads",
-  "baseUrl": "https://ztrain-web.vercel.app",
-  "ignoreTestFiles": [],
-  "screenshotOnRunFailure": true
+    "baseUrl": "https://ztrain-web.vercel.app",
+    "downloadsFolder": "target/downloads",
+    "screenshotsFolder": "target/screenshots",
+    "screenshotOnRunFailure": true,
+    "videosFolder": "target/videos",
+    "fixturesFolder": "src/test/resources/fixtures",
+    "integrationFolder": "src/test/resources/features",
+    "pluginsFile": "src/main/plugins/index.js",
+    "supportFile": "src/test/support/index.js",
+    "ignoreTestFiles": "*.hot-update.js",
+    "testFiles": "**/*.feature",
+    "viewportWidth": 1366,
+    "viewportHeight": 768,
+    "scrollBehavior": "center",
+    "reporter": "mocha-allure-reporter",
+    "reporterOptions": {
+        "targetDir": "target/allure-results"
+    },
+    "video": false
 }

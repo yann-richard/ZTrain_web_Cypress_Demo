@@ -1,5 +1,5 @@
-import {And, Given, Then, When} from "cypress-cucumber-preprocessor/steps"
-import HomePage from '../Pages/HomePage';
+import {And, Given, Then, When} from "@badeball/cypress-cucumber-preprocessor"
+import HomePage from '../../../main/pageObjects/HomePage';
 
 const inputQtyCard = '.style_quantity__qJbQ3';
 const firstProduct1 = ':nth-child(2) > .style_card_body__QuFGN > [style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"] > .style_card_body_img__mkV1D';

@@ -1,31 +1,48 @@
 {
-  "name": "z-train",
+  "name": "ZTRAIN_WEB_CYPRESS_DEMO",
   "version": "1.0.0",
-  "description": "",
+  "description": "A test automation framework with cypress and cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open"
+    "test": "cypress run",
+    "report:allure": "allure generate target/allure-results --clean -o target/allure-report && allure open  target/allure-report",
+    "test:allure": "npm run test && npm run report:allure",
+    "cypress:open": "cypress open"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yann-richard/ZTrain_web_Cypress_Demo"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "automation"
+  ],
+  "author": "iii237",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^9.5.1"
+  "bugs": {
+    "url": "https://github.com/yann-richard/ZTrain_web_Cypress_Demo/issues"
+  },
+  "homepage": "https://github.com/yann-richard/ZTrain_web_Cypress_Demo#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^9.1.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "allure-commandline": "^2.17.2",
+    "cypress": "^9.7.0",
+    "esbuild": "^0.14.42",
+    "mocha": "^10.0.0",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
-    "stepDefinitions": "src/test/step_definitions",
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "target/cucumber-json",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
+    "stepDefinitions": [
+      "src/test/resources/features/[filepath]/**/*.{js,ts}",
+      "src/test/resources/features/[filepath].{js,ts}",
+      "src/test/support/step_definitions/**/*.{js,ts}"
+    ],
+    "json": {
+      "enabled": true,
+      "output": "target/cucumber-report.json"
     }
-  },
-  "devDependencies": {
-    "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-localstorage-commands": "^1.7.0",
-    "multiple-cucumber-html-reporter": "^1.19.0"
   }
 }
